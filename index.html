@@ -2,8 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة المصطفى لصيانة المكيفات - خدمات صيانة مكيفات احترافية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>شركة المصطفى لصيانة المكيفات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -17,66 +17,79 @@
             line-height: 1.6;
             color: #333;
             background: #f8f9fa;
+            overflow-x: hidden;
         }
 
+        /* تحسينات خاصة للجوال */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header محسن للجوال */
         .header {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 1rem 0;
+            padding: 10px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
+            gap: 8px;
         }
 
         .nav-contact {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 8px;
         }
 
         .phone-number {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
-            background: rgba(255,255,255,0.1);
-            padding: 8px 15px;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 12px;
+            border-radius: 15px;
             backdrop-filter: blur(10px);
         }
 
         .header-buttons {
             display: flex;
-            gap: 10px;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .header-btn {
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 6px 12px;
+            border-radius: 15px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 5px;
-            font-size: 0.9rem;
+            gap: 4px;
+            font-size: 0.8rem;
+            min-width: 80px;
+            justify-content: center;
         }
 
         .whatsapp-btn {
@@ -90,74 +103,65 @@
         }
 
         .header-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transform: scale(1.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
+        /* Hero Section محسن للجوال */
         .hero {
-            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('./images/hero-bg.jpg');
+            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(42, 82, 152, 0.85)), url('./images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             color: white;
             text-align: center;
+            padding-top: 120px;
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
+            padding: 20px 15px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
+            line-height: 1.3;
             animation: fadeInUp 1s ease-out;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-bottom: 2rem;
+            line-height: 1.5;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            padding: 15px 30px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 280px;
+            min-height: 48px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .btn-primary {
@@ -175,107 +179,97 @@
             color: white;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        .btn:active {
+            transform: scale(0.95);
         }
 
+        /* Services Section محسن للجوال */
         .services {
-            padding: 80px 0;
+            padding: 60px 0;
             background: white;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #1e3c72;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             position: relative;
+            padding: 0 15px;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 100px;
-            height: 4px;
+            width: 80px;
+            height: 3px;
             background: #ffd700;
-            margin: 20px auto;
+            margin: 15px auto;
             border-radius: 2px;
         }
 
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .service-card {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 12px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: all 0.3s;
             border: 2px solid transparent;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             border-color: #ffd700;
         }
 
         .service-card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: #1e3c72;
-            margin-bottom: 1rem;
-            display: block;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #1e3c72;
-            margin-bottom: 1rem;
+            margin-bottom: 12px;
         }
 
         .service-card p {
             color: #666;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
         }
 
         .service-buttons {
             display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 8px;
         }
 
         .service-btn {
-            padding: 8px 16px;
+            padding: 10px 16px;
             border-radius: 20px;
             text-decoration: none;
             font-size: 0.9rem;
             transition: all 0.3s;
             display: flex;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            gap: 6px;
             font-weight: bold;
+            min-height: 44px;
         }
 
         .btn-whatsapp-service {
@@ -288,130 +282,147 @@
             color: white;
         }
 
-        .service-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .service-btn:active {
+            transform: scale(0.95);
         }
 
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+        }
+
+        /* About Section محسن للجوال */
         .about {
-            padding: 80px 0;
+            padding: 60px 0;
             background: #f8f9fa;
         }
 
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #1e3c72;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .about-text p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
         }
 
         .features {
             list-style: none;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .features li {
-            padding: 10px 0;
+            padding: 8px 0;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.95rem;
         }
 
         .features li::before {
             content: '✓';
             color: #ffd700;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            min-width: 20px;
         }
 
-        .stats {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 60px 0;
+        .about-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            text-align: center;
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        .stat-item h3 {
-            font-size: 3rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-
-        .stat-item p {
-            font-size: 1.2rem;
-        }
-
+        /* Contact Section محسن للجوال */
         .contact {
-            padding: 80px 0;
+            padding: 60px 0;
             background: white;
         }
 
         .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
         .contact-info {
             background: #f8f9fa;
-            padding: 40px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 12px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding: 10px 0;
         }
 
         .contact-item i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #1e3c72;
-            width: 30px;
+            width: 25px;
         }
 
-        .contact-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+        .contact-item div {
+            font-size: 0.95rem;
         }
 
         .contact-form {
             background: #f8f9fa;
-            padding: 40px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 12px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             color: #1e3c72;
             font-weight: bold;
+            font-size: 0.95rem;
         }
 
         .form-group input,
@@ -423,6 +434,8 @@
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s;
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         .form-group input:focus,
@@ -432,37 +445,106 @@
             border-color: #1e3c72;
         }
 
+        .form-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Footer محسن للجوال */
         .footer {
             background: #1e3c72;
             color: white;
-            text-align: center;
-            padding: 40px 0;
+            padding: 30px 0 20px;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
         }
 
         .footer-section h3 {
             color: #ffd700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
         }
 
         .footer-section a {
             color: #ccc;
             text-decoration: none;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             transition: color 0.3s;
+            font-size: 0.9rem;
         }
 
         .footer-section a:hover {
             color: #ffd700;
         }
 
+        .footer-section p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-whatsapp {
+            background: #25D366;
+        }
+
+        .social-phone {
+            background: #e74c3c;
+        }
+
+        /* WhatsApp Float محسن للجوال */
+        .whatsapp-float {
+            position: fixed;
+            width: 56px;
+            height: 56px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover,
+        .whatsapp-float:active {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -474,153 +556,155 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .nav-contact {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .header-buttons {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .phone-number {
-                font-size: 0.9rem;
-            }
-
-            .header-btn {
-                font-size: 0.8rem;
-                padding: 6px 12px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-buttons {
-                flex-direction: column;
-            }
-
-            .service-btn {
-                justify-content: center;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
-            }
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            left: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+
+        /* تحسينات إضافية للشاشات الصغيرة جداً */
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .service-card {
+                padding: 15px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+        }
+
+        /* تحسينات للشاشات المتوسطة */
+        @media (min-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-contact {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .about-content {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .contact-content {
+                flex-direction: row;
+            }
+
+            .footer-content {
+                flex-direction: row;
+                text-align: right;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* تحسين أداء التمرير */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* منع التكبير غير المرغوب فيه */
+        input, select, textarea {
+            font-size: 16px;
+        }
+
+        /* تحسين التباعد للمس */
+        .btn, .service-btn, .header-btn {
+            min-height: 44px;
+            min-width: 44px;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-tools"></i>
-                شركة المصطفى لصيانة المكيفات
-            </div>
-            <div class="nav-contact">
-                <div class="phone-number">
-                    <i class="fas fa-phone"></i>
-                    +966568554240
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-snowflake"></i>
+                    شركة المصطفى لصيانة المكيفات
                 </div>
-                <div class="header-buttons">
-                    <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="header-btn whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        واتساب
-                    </a>
-                    <a href="tel:+966568554240" class="header-btn call-btn">
+                <div class="nav-contact">
+                    <div class="phone-number">
                         <i class="fas fa-phone"></i>
-                        اتصال
-                    </a>
+                        +966568554240
+                    </div>
+                    <div class="header-buttons">
+                        <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="header-btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                        <a href="tel:+966568554240" class="header-btn call-btn">
+                            <i class="fas fa-phone"></i>
+                            اتصال
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>شركة المصطفى لصيانة المكيفات</h1>
-            <p>متخصصون في صيانة وإصلاح جميع أنواع المكيفات بجودة عالية وأسعار تنافسية</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر مجاني لصيانة المكيف" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    عرض سعر مجاني
-                </a>
-                <a href="tel:+966568554240" class="btn btn-call">
-                    <i class="fas fa-phone"></i>
-                    اتصل الآن
-                </a>
-                <a href="https://wa.me/966568554240?text=أود التواصل معكم للحصول على خدمة صيانة سريعة" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-comments"></i>
-                    تواصل سريع
-                </a>
+            <div class="container">
+                <h1>شركة المصطفى لصيانة المكيفات</h1>
+                <p>متخصصون في صيانة وإصلاح جميع أنواع المكيفات بجودة عالية وأسعار تنافسية</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر مجاني لصيانة المكيف" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        عرض سعر مجاني
+                    </a>
+                    <a href="tel:+966568554240" class="btn btn-call">
+                        <i class="fas fa-phone"></i>
+                        اتصل الآن
+                    </a>
+                    <a href="https://wa.me/966568554240?text=أود التواصل معكم للحصول على خدمة صيانة سريعة" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-comments"></i>
+                        تواصل سريع
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -636,14 +720,15 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود صيانة مكيف سبليت" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <img src="./images/window-ac.jpg" alt="صيانة مكيفات شباك">
                     <h3>صيانة مكيفات شباك</h3>
@@ -651,14 +736,15 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود صيانة مكيف شباك" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <img src="./images/central-ac.jpg" alt="صيانة التكييف المركزي">
                     <h3>صيانة التكييف المركزي</h3>
@@ -666,14 +752,15 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود صيانة التكييف المركزي" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <img src="./images/freon.jpg" alt="شحن الفريون">
                     <h3>شحن الفريون</h3>
@@ -681,14 +768,15 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود شحن غاز الفريون للمكيف" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <img src="./images/installation.jpg" alt="فك وتركيب المكيفات">
                     <h3>فك وتركيب المكيفات</h3>
@@ -696,14 +784,15 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود خدمة فك وتركيب مكيف" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <img src="./images/maintenance-contract.jpg" alt="عقود الصيانة الدورية">
                     <h3>عقود الصيانة الدورية</h3>
@@ -711,11 +800,11 @@
                     <div class="service-buttons">
                         <a href="https://wa.me/966568554240?text=أود الاستفسار عن عقود الصيانة الدورية" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
-                            واتساب
+                            طلب عبر واتساب
                         </a>
                         <a href="tel:+966568554240" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
-                            اتصال
+                            اتصال مباشر
                         </a>
                     </div>
                 </div>
@@ -750,203 +839,22 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>لماذا تختار شركة المصطفى لصيانة المكيفات؟</h2>
+                    <h2>لماذا تختار شركة المصطفى؟</h2>
                     <p>شركة المصطفى لصيانة المكيفات هي شركتك المتخصصة في تقديم خدمات صيانة وإصلاح المكيفات بأعلى معايير الجودة والمهنية.</p>
                     <p>نحن نفتخر بفريق من الفنيين المهرة والمعتمدين الذين يتمتعون بخبرة واسعة في مجال صيانة المكيفات، مما يضمن لك الحصول على خدمة متميزة.</p>
                     
                     <ul class="features">
-                        <li>فنيين مختصين في صيانة المكيفات</li>
-                        <li>استخدام قطع غيار أصلية ومعتمدة</li>
-                        <li>خدمة عملاء متاحة على مدار الساعة</li>
-                        <li>ضمان شامل على جميع أعمال الصيانة</li>
-                        <li>أسعار تنافسية وعروض مميزة</li>
-                        <li>سرعة في الاستجابة والتنفيذ</li>
-                        <li>صيانة لجميع الماركات والأنواع</li>
-                        <li>عقود صيانة دورية بأسعار مخفضة</li>
+                        <li>فنيين مختصين ومعتمدين</li>
+                        <li>قطع غيار أصلية ومعتمدة</li>
+                        <li>خدمة عملاء 24/7</li>
+                        <li>ضمان شامل على الأعمال</li>
+                        <li>أسعار تنافسية</li>
+                        <li>استجابة سريعة</li>
+                        <li>جميع الماركات والأنواع</li>
+                        <li>عقود صيانة مخفضة</li>
                     </ul>
 
                     <div class="contact-buttons">
-                        <a href="https://wa.me/966568554240?text=مرحباً، أود التواصل مع شركة المصطفى لصيانة المكيفات" class="btn btn-whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل واتساب
-                        </a>
-                        <a href="tel:+966568554240" class="btn btn-call">
-                            <i class="fas fa-phone"></i>
-                            اتصل الآن
-                        </a>
-                        <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر مفصل لخدمة صيانة المكيفات" class="btn btn-primary" target="_blank">
-                            <i class="fas fa-calculator"></i>
-                            عرض سعر
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3 style="color: #1e3c72; margin-bottom: 30px;">طلب خدمة سريع</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">الاسم</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">رقم الهاتف</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">نوع الخدمة</label>
-                            <select id="service" name="service" required>
-                                <option value="">اختر نوع الخدمة</option>
-                                <option value="split-ac">صيانة مكيفات سبليت</option>
-                                <option value="window-ac">صيانة مكيفات شباك</option>
-                                <option value="central-ac">صيانة التكييف المركزي</option>
-                                <option value="freon">شحن الفريون</option>
-                                <option value="installation">فك وتركيب المكيفات</option>
-                                <option value="maintenance-contract">عقود الصيانة الدورية</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">وصف المشكلة</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <div style="display: flex; gap: 10px; margin-top: 20px;">
-                            <a href="#" onclick="sendWhatsAppMessage(); return false;" class="btn btn-whatsapp" style="flex: 1; justify-content: center;">
-                                <i class="fab fa-whatsapp"></i>
-                                إرسال للواتساب
-                            </a>
-                            <a href="tel:+966568554240" class="btn btn-call" style="flex: 1; justify-content: center;">
-                                <i class="fas fa-phone"></i>
-                                اتصل مباشرة
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>شركة المصطفى</h3>
-                    <p>شريكك الموثوق في صيانة المكيفات</p>
-                    <p>نقدم خدمات صيانة مكيفات متميزة بجودة عالية وأسعار تنافسية</p>
-                    <p><strong>للتواصل: +966568554240</strong></p>
-                </div>
-                <div class="footer-section">
-                    <h3>خدماتنا</h3>
-                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف سبليت" target="_blank">صيانة مكيفات سبليت</a>
-                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف شباك" target="_blank">صيانة مكيفات شباك</a>
-                    <a href="https://wa.me/966568554240?text=أود صيانة التكييف المركزي" target="_blank">صيانة التكييف المركزي</a>
-                    <a href="https://wa.me/966568554240?text=أود شحن غاز الفريون" target="_blank">شحن الفريون</a>
-                    <a href="https://wa.me/966568554240?text=أود فك وتركيب مكيف" target="_blank">فك وتركيب المكيفات</a>
-                    <a href="https://wa.me/966568554240?text=أود الاستفسار عن عقود الصيانة" target="_blank">عقود الصيانة الدورية</a>
-                </div>
-                <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <a href="#home">الرئيسية</a>
-                    <a href="#services">الخدمات</a>
-                    <a href="#about">من نحن</a>
-                    <a href="#contact">اتصل بنا</a>
-                    <div style="margin-top: 20px;">
-                        <a href="https://wa.me/966568554240" style="color: #25D366; font-size: 1.5rem; margin-left: 10px;" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="tel:+966568554240" style="color: #e74c3c; font-size: 1.5rem;">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <hr style="border: 1px solid #444; margin: 30px 0;">
-            <p>&copy; 2025 شركة المصطفى لصيانة المكيفات. جميع الحقوق محفوظة.</p>
-            <p>للتواصل: <a href="tel:+966568554240" style="color: #ffd700;">+966568554240</a> | <a href="https://wa.me/966568554240" style="color: #25D366;" target="_blank">واتساب</a></p>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        // تأثير التمرير السلس للروابط
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // دالة إرسال رسالة واتساب من النموذج
-        function sendWhatsAppMessage() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service');
-            const serviceText = service.options[service.selectedIndex].text;
-            const message = document.getElementById('message').value;
-
-            if (!name || !phone || !service.value || !message) {
-                alert('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-
-            const whatsappMessage = `مرحباً، اسمي ${name}
-رقم الهاتف: ${phone}
-أود طلب خدمة: ${serviceText}
-وصف المشكلة: ${message}
-
-أرجو التواصل معي في أقرب وقت ممكن.`;
-
-            const whatsappURL = `https://wa.me/966568554240?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, '_blank');
-        }
-
-        // تأثير إظهار العناصر عند التمرير
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // مراقبة العناصر القابلة للعرض
-        document.querySelectorAll('.service-card, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // إضافة تأثير للأزرار عند التحميل
-        window.addEventListener('load', function() {
-            document.querySelectorAll('.btn, .service-btn').forEach((btn, index) => {
-                btn.style.animationDelay = `${index * 0.1}s`;
-                btn.classList.add('fadeInUp');
-            });
-        });
-
-        // تحسين تجربة المستخدم على الأجهزة المحمولة
-        if (window.innerWidth <= 768) {
-            const whatsappFloat = document.querySelector('.whatsapp-float');
-            whatsappFloat.style.bottom = '20px';
-            whatsappFloat.style.left = '20px';
-        }
-    </script>
-</body>
-</html>buttons">
                         <a href="https://wa.me/966568554240?text=أود معرفة المزيد عن خدماتكم" class="btn btn-whatsapp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             تواصل معنا
@@ -958,7 +866,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="./images/about-us.jpg" alt="شركة المصطفى لصيانة المكيفات" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px;">
+                    <img src="./images/about-us.jpg" alt="شركة المصطفى لصيانة المكيفات">
                 </div>
             </div>
         </div>
@@ -969,7 +877,7 @@
             <h2 class="section-title">اتصل بنا الآن</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3 style="color: #1e3c72; margin-bottom: 30px;">معلومات التواصل</h3>
+                    <h3 style="color: #1e3c72; margin-bottom: 20px; text-align: center;">معلومات التواصل</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
@@ -1006,4 +914,266 @@
                         </div>
                     </div>
 
-                    <div class="contact-
+                    <div class="contact-buttons">
+                        <a href="https://wa.me/966568554240?text=مرحباً، أود التواصل مع شركة المصطفى لصيانة المكيفات" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            تواصل واتساب
+                        </a>
+                        <a href="tel:+966568554240" class="btn btn-call">
+                            <i class="fas fa-phone"></i>
+                            اتصل الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #1e3c72; margin-bottom: 20px; text-align: center;">طلب خدمة سريع</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">نوع الخدمة المطلوبة</label>
+                            <select id="service" name="service" required>
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="split-ac">صيانة مكيفات سبليت</option>
+                                <option value="window-ac">صيانة مكيفات شباك</option>
+                                <option value="central-ac">صيانة التكييف المركزي</option>
+                                <option value="freon">شحن الفريون</option>
+                                <option value="installation">فك وتركيب المكيفات</option>
+                                <option value="maintenance-contract">عقود الصيانة الدورية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">وصف المشكلة أو الخدمة المطلوبة</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <div class="form-buttons">
+                            <a href="#" onclick="sendWhatsAppMessage(); return false;" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                إرسال للواتساب
+                            </a>
+                            <a href="tel:+966568554240" class="btn btn-call">
+                                <i class="fas fa-phone"></i>
+                                اتصال مباشر
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>شركة المصطفى</h3>
+                    <p>شريكك الموثوق في صيانة المكيفات</p>
+                    <p>خدمات متميزة بجودة عالية وأسعار تنافسية</p>
+                    <p><strong>للتواصل: +966568554240</strong></p>
+                    <div class="social-links">
+                        <a href="https://wa.me/966568554240" class="social-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+966568554240" class="social-phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف سبليت" target="_blank">صيانة مكيفات سبليت</a>
+                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف شباك" target="_blank">صيانة مكيفات شباك</a>
+                    <a href="https://wa.me/966568554240?text=أود صيانة التكييف المركزي" target="_blank">التكييف المركزي</a>
+                    <a href="https://wa.me/966568554240?text=أود شحن غاز الفريون" target="_blank">شحن الفريون</a>
+                    <a href="https://wa.me/966568554240?text=أود فك وتركيب مكيف" target="_blank">فك وتركيب</a>
+                    <a href="https://wa.me/966568554240?text=أود الاستفسار عن عقود الصيانة" target="_blank">عقود الصيانة</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>تواصل سريع</h3>
+                    <p>متاحون 24 ساعة يومياً لخدمتكم</p>
+                    <p>استجابة فورية لجميع الطلبات</p>
+                    <p>فنيون مختصون ومعتمدون</p>
+                    <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر" target="_blank" style="color: #25D366; font-weight: bold;">
+                        <i class="fab fa-whatsapp"></i>
+                        احصل على عرض سعر مجاني
+                    </a>
+                </div>
+            </div>
+            <hr style="border: 1px solid #444; margin: 25px 0 15px;">
+            <div style="text-align: center;">
+                <p>&copy; 2025 شركة المصطفى لصيانة المكيفات. جميع الحقوق محفوظة.</p>
+                <p style="margin-top: 8px;">
+                    للتواصل: 
+                    <a href="tel:+966568554240" style="color: #ffd700; text-decoration: none; margin: 0 5px;">
+                        <i class="fas fa-phone"></i> +966568554240
+                    </a>
+                    |
+                    <a href="https://wa.me/966568554240" style="color: #25D366; text-decoration: none; margin: 0 5px;" target="_blank">
+                        <i class="fab fa-whatsapp"></i> واتساب
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // تحسين التمرير السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // دالة إرسال رسالة واتساب من النموذج
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service');
+            const serviceText = service.options[service.selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            if (!name || !phone || !service.value || !message) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+
+            const whatsappMessage = `مرحباً، أود طلب خدمة صيانة مكيفات
+
+📝 البيانات:
+الاسم: ${name}
+رقم الهاتف: ${phone}
+نوع الخدمة: ${serviceText}
+
+📋 تفاصيل الطلب:
+${message}
+
+أرجو التواصل معي في أقرب وقت ممكن، شكراً لكم.`;
+
+            const whatsappURL = `https://wa.me/966568554240?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, '_blank');
+            
+            // إعادة تعيين النموذج
+            document.querySelector('form').reset();
+            
+            // رسالة تأكيد
+            alert('تم إرسال طلبك بنجاح! سيتم التواصل معك قريباً.');
+        }
+
+        // تأثير الظهور التدريجي للعناصر
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // تطبيق التأثير على العناصر
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.service-card, .stat-item, .contact-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // تحسين الأداء للأجهزة المحمولة
+        let ticking = false;
+        function updateHeader() {
+            const header = document.querySelector('.header');
+            const scrolled = window.scrollY;
+            
+            if (scrolled > 50) {
+                header.style.backgroundColor = 'rgba(30, 60, 114, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = '';
+                header.style.backdropFilter = '';
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        });
+
+        // تحسين استجابة اللمس
+        document.querySelectorAll('.btn, .service-btn, .header-btn').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            btn.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // منع الزوم عند النقر على الإدخالات في iOS
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+            document.querySelectorAll('input, select, textarea').forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.style.fontSize = '16px';
+                });
+            });
+        }
+
+        // تحسين تجربة النموذج
+        document.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.style.backgroundColor = '#f0f8ff';
+            });
+            
+            element.addEventListener('blur', function() {
+                this.parentElement.style.backgroundColor = '';
+            });
+        });
+
+        // رسالة ترحيب تلقائية
+        setTimeout(function() {
+            if (!sessionStorage.getItem('welcomeShown')) {
+                const welcomeMsg = 'مرحباً بك في شركة المصطفى لصيانة المكيفات! 🌟\n\nنحن في خدمتك 24/7\nللتواصل السريع اضغط على زر الواتساب';
+                
+                if (confirm(welcomeMsg + '\n\nهل تريد التواصل معنا الآن؟')) {
+                    window.open('https://wa.me/966568554240?text=مرحباً، وصلت للموقع وأود الاستفسار عن خدماتكم', '_blank');
+                }
+                
+                sessionStorage.setItem('welcomeShown', 'true');
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
