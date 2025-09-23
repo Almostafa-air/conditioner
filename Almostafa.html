@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة المصطفى لصيانة المكيفات - خدمات صيانة مكيفات احترافية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), url('file:///C:/Users/Ahmed/Desktop/New folder/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ffd700;
+            color: #1e3c72;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: #ffd700;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: #ffd700;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stats {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+        }
+
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            width: 30px;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3c72;
+        }
+
+        .footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                شركة المصطفى لصيانة المكيفات
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>شركة المصطفى لصيانة المكيفات</h1>
+            <p>متخصصون في صيانة وإصلاح جميع أنواع المكيفات بجودة عالية وأسعار تنافسية</p>
+            <a href="#contact" class="btn">احصل على عرض سعر مجاني</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتخصصة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/split-ac.jpg" alt="صيانة مكيفات سبليت" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>صيانة مكيفات سبليت</h3>
+                    <p>صيانة وإصلاح مكيفات السبليت، تنظيف شامل، فحص دوري، وضمان أداء مثالي</p>
+                </div>
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/window-ac.jpg" alt="صيانة مكيفات شباك" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>صيانة مكيفات شباك</h3>
+                    <p>إصلاح وصيانة مكيفات الشباك، تنظيف المرشحات، وإعادة تأهيل الوحدات القديمة</p>
+                </div>
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/central-ac.jpg" alt="صيانة التكييف المركزي" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>صيانة التكييف المركزي</h3>
+                    <p>خدمات متخصصة للتكييف المركزي، صيانة الشبكات، وفحص الأنظمة المعقدة</p>
+                </div>
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/freon.jpg" alt="شحن الفريون" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>شحن الفريون</h3>
+                    <p>شحن وتعبئة غاز الفريون لجميع أنواع المكيفات مع استخدام أحدث المعدات</p>
+                </div>
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/installation.jpg" alt="فك وتركيب المكيفات" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>فك وتركيب المكيفات</h3>
+                    <p>خدمات فك وتركيب المكيفات بطريقة احترافية مع ضمان سلامة الوحدة</p>
+                </div>
+                <div class="service-card">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/maintenance-contract.jpg" alt="عقود الصيانة الدورية" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                    <h3>عقود الصيانة الدورية</h3>
+                    <p>عقود صيانة سنوية وشهرية للمكيفات مع زيارات دورية وأسعار مخفضة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>عميل راضي</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>سنوات خبرة</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>خدمة العملاء</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>ضمان الجودة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>لماذا تختار شركة المصطفى لصيانة المكيفات؟</h2>
+                    <p>شركة المصطفى لصيانة المكيفات هي شركتك المتخصصة في تقديم خدمات صيانة وإصلاح المكيفات بأعلى معايير الجودة والمهنية.</p>
+                    <p>نحن نفتخر بفريق من الفنيين المهرة والمعتمدين الذين يتمتعون بخبرة واسعة في مجال صيانة المكيفات، مما يضمن لك الحصول على خدمة متميزة.</p>
+                    
+                    <ul class="features">
+                        <li>فنيين مختصين في صيانة المكيفات</li>
+                        <li>استخدام قطع غيار أصلية ومعتمدة</li>
+                        <li>خدمة عملاء متاحة على مدار الساعة</li>
+                        <li>ضمان شامل على جميع أعمال الصيانة</li>
+                        <li>أسعار تنافسية وعروض مميزة</li>
+                        <li>سرعة في الاستجابة والتنفيذ</li>
+                        <li>صيانة لجميع الماركات والأنواع</li>
+                        <li>عقود صيانة دورية بأسعار مخفضة</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="file:///C:/Users/Ahmed/Desktop/New folder/about-us.jpg" alt="شركة المصطفى لصيانة المكيفات" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا الآن</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="color: #1e3c72; margin-bottom: 30px;">معلومات التواصل</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>هاتف:</strong><br>
+                            0500123456
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>واتساب:</strong><br>
+                            0500123456
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>البريد الإلكتروني:</strong><br>
+                            info@almustafa-maintenance.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>العنوان:</strong><br>
+                            المملكة العربية السعودية
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>ساعات العمل:</strong><br>
+                            24 ساعة - 7 أيام في الأسبوع
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: #1e3c72; margin-bottom: 30px;">طلب خدمة</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">نوع الخدمة</label>
+                            <select id="service" name="service" required>
+                                <option value="">اختر نوع الخدمة</option>
+                                <option value="split-ac">صيانة مكيفات سبليت</option>
+                                <option value="window-ac">صيانة مكيفات شباك</option>
+                                <option value="central-ac">صيانة التكييف المركزي</option>
+                                <option value="freon">شحن الفريون</option>
+                                <option value="installation">فك وتركيب المكيفات</option>
+                                <option value="maintenance-contract">عقود الصيانة الدورية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">وصف المشكلة</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 20px;">إرسال الطلب</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>شركة المصطفى</h3>
+                    <p>شريكك الموثوق في صيانة المكيفات</p>
+                    <p>نقدم خدمات صيانة مكيفات متميزة بجودة عالية وأسعار تنافسية</p>
+                </div>
+                <div class="footer-section">
+                    <h3>خدماتنا</h3>
+                    <a href="#">صيانة مكيفات سبليت</a>
+                    <a href="#">صيانة مكيفات شباك</a>
+                    <a href="#">صيانة التكييف المركزي</a>
+                    <a href="#">شحن الفريون</a>
+                    <a href="#">فك وتركيب المكيفات</a>
+                    <a href="#">عقود الصيانة الدورية</a>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <a href="#home">الرئيسية</a>
+                    <a href="#services">الخدمات</a>
+                    <a href="#about">من نحن</a>
+                    <a href="#contact">اتصل بنا</a>
+                </div>
+            </div>
+            <hr style="border: 1px solid #444; margin: 30px 0;">
+            <p>&copy; 2025 شركة المصطفى لصيانة المكيفات. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/0500123456" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // تأثير التمرير السلس للروابط
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // تأثير إرسال النموذج
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لك! سنتواصل معك قريباً لتأكيد موعد الخدمة.');
+        });
+
+        // تأثير إظهار العناصر عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // مراقبة العناصر القابلة للعرض
+        document.querySelectorAll('.service-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
