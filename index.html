@@ -1,6 +1,3 @@
-عاوز اضيف طريقة لتقييم الخدمات والموقع ومكان للتعليقات فى الكود التالى مع الحفاظ على جودته وتغيير رقم ووسيلة التواصل الى الرقم +966564267351
-والكود هو
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -353,7 +350,7 @@
         }
 
         .features li::before {
-            content: '✓';
+            content: '✔';
             color: #ffd700;
             font-weight: bold;
             font-size: 1.1rem;
@@ -453,195 +450,6 @@
             flex-direction: column;
             gap: 10px;
             margin-top: 20px;
-        }
-
-        /* Footer محسن للجوال */
-        .footer {
-            background: #1e3c72;
-            color: white;
-            padding: 30px 0 20px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            text-align: center;
-        }
-
-        .footer-section h3 {
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .footer-section a {
-            color: #ccc;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
-            transition: color 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .footer-section a:hover {
-            color: #ffd700;
-        }
-
-        .footer-section p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            transition: all 0.3s;
-        }
-
-        .social-whatsapp {
-            background: #25D366;
-        }
-
-        .social-phone {
-            background: #e74c3c;
-        }
-
-        /* WhatsApp Float محسن للجوال */
-        .whatsapp-float {
-            position: fixed;
-            width: 56px;
-            height: 56px;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            font-size: 24px;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s;
-            animation: pulse 2s infinite;
-        }
-
-        .whatsapp-float:hover,
-        .whatsapp-float:active {
-            background-color: #128c7e;
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* تحسينات إضافية للشاشات الصغيرة جداً */
-        @media (max-width: 360px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 0.9rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-
-            .service-card {
-                padding: 15px;
-            }
-
-            .contact-info,
-            .contact-form {
-                padding: 20px;
-            }
-        }
-
-        /* تحسينات للشاشات المتوسطة */
-        @media (min-width: 768px) {
-            .navbar {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .nav-contact {
-                flex-direction: row;
-                gap: 15px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .services-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            .about-content {
-                flex-direction: row;
-                align-items: center;
-            }
-
-            .contact-content {
-                flex-direction: row;
-            }
-
-            .footer-content {
-                flex-direction: row;
-                text-align: right;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
 
         /* Reviews Section */
@@ -838,6 +646,203 @@
             gap: 15px;
         }
 
+        /* Footer محسن للجوال */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 30px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-whatsapp {
+            background: #25D366;
+        }
+
+        .social-phone {
+            background: #e74c3c;
+        }
+
+        /* WhatsApp Float محسن للجوال */
+        .whatsapp-float {
+            position: fixed;
+            width: 56px;
+            height: 56px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            font-size: 24px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover,
+        .whatsapp-float:active {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* تحسينات إضافية للشاشات الصغيرة جداً */
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .service-card {
+                padding: 15px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+        }
+
+        /* تحسينات للشاشات المتوسطة */
+        @media (min-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-contact {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .about-content {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .contact-content {
+                flex-direction: row;
+            }
+
+            .footer-content {
+                flex-direction: row;
+                text-align: right;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .rating-breakdown {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
@@ -879,14 +884,14 @@
                 <div class="nav-contact">
                     <div class="phone-number">
                         <i class="fas fa-phone"></i>
-                        +966568554240
+                        +966564267351
                     </div>
                     <div class="header-buttons">
-                        <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="header-btn whatsapp-btn" target="_blank">
+                        <a href="https://wa.me/966564267351?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="header-btn whatsapp-btn" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             واتساب
                         </a>
-                        <a href="tel:+966568554240" class="header-btn call-btn">
+                        <a href="tel:+966564267351" class="header-btn call-btn">
                             <i class="fas fa-phone"></i>
                             اتصال
                         </a>
@@ -906,15 +911,15 @@
                     نخدم جميع أحياء المدينة المنورة وضواحيها
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر مجاني لصيانة المكيف" class="btn btn-whatsapp" target="_blank">
+                    <a href="https://wa.me/966564267351?text=أود الحصول على عرض سعر مجاني لصيانة المكيف" class="btn btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                         عرض سعر مجاني
                     </a>
-                    <a href="tel:+966568554240" class="btn btn-call">
+                    <a href="tel:+966564267351" class="btn btn-call">
                         <i class="fas fa-phone"></i>
                         اتصل الآن
                     </a>
-                    <a href="https://wa.me/966568554240?text=أود التواصل معكم للحصول على خدمة صيانة سريعة" class="btn btn-primary" target="_blank">
+                    <a href="https://wa.me/966564267351?text=أود التواصل معكم للحصول على خدمة صيانة سريعة" class="btn btn-primary" target="_blank">
                         <i class="fas fa-comments"></i>
                         تواصل سريع
                     </a>
@@ -932,11 +937,11 @@
                     <h3>صيانة مكيفات سبليت</h3>
                     <p>صيانة وإصلاح مكيفات السبليت، تنظيف شامل، فحص دوري، وضمان أداء مثالي</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود صيانة مكيف سبليت" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود صيانة مكيف سبليت" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -948,11 +953,11 @@
                     <h3>صيانة مكيفات شباك</h3>
                     <p>إصلاح وصيانة مكيفات الشباك، تنظيف المرشحات، وإعادة تأهيل الوحدات القديمة</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود صيانة مكيف شباك" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود صيانة مكيف شباك" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -964,11 +969,11 @@
                     <h3>صيانة التكييف المركزي</h3>
                     <p>خدمات متخصصة للتكييف المركزي، صيانة الشبكات، وفحص الأنظمة المعقدة</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود صيانة التكييف المركزي" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود صيانة التكييف المركزي" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -980,11 +985,11 @@
                     <h3>شحن الفريون</h3>
                     <p>شحن وتعبئة غاز الفريون لجميع أنواع المكيفات مع استخدام أحدث المعدات</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود شحن غاز الفريون للمكيف" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود شحن غاز الفريون للمكيف" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -996,11 +1001,11 @@
                     <h3>فك وتركيب المكيفات</h3>
                     <p>خدمات فك وتركيب المكيفات بطريقة احترافية مع ضمان سلامة الوحدة</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود خدمة فك وتركيب مكيف" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود خدمة فك وتركيب مكيف" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -1012,11 +1017,11 @@
                     <h3>عقود الصيانة الدورية</h3>
                     <p>عقود صيانة سنوية وشهرية للمكيفات مع زيارات دورية وأسعار مخفضة</p>
                     <div class="service-buttons">
-                        <a href="https://wa.me/966568554240?text=أود الاستفسار عن عقود الصيانة الدورية" class="service-btn btn-whatsapp-service" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود الاستفسار عن عقود الصيانة الدورية" class="service-btn btn-whatsapp-service" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             طلب عبر واتساب
                         </a>
-                        <a href="tel:+966568554240" class="service-btn btn-call-service">
+                        <a href="tel:+966564267351" class="service-btn btn-call-service">
                             <i class="fas fa-phone"></i>
                             اتصال مباشر
                         </a>
@@ -1031,7 +1036,7 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>500+</h3>
-                    <p>عميل راضي</p>
+                    <p>عميل راض</p>
                 </div>
                 <div class="stat-item">
                     <h3>10+</h3>
@@ -1086,11 +1091,11 @@
                     </ul>
 
                     <div class="contact-buttons">
-                        <a href="https://wa.me/966568554240?text=أود معرفة المزيد عن خدماتكم" class="btn btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/966564267351?text=أود معرفة المزيد عن خدماتكم" class="btn btn-whatsapp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             تواصل معنا
                         </a>
-                        <a href="tel:+966568554240" class="btn btn-call">
+                        <a href="tel:+966564267351" class="btn btn-call">
                             <i class="fas fa-phone"></i>
                             اتصل بنا
                         </a>
@@ -1099,6 +1104,241 @@
                 <div class="about-image">
                     <img src="./images/about-us.jpg" alt="شركة المصطفى لصيانة المكيفات">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا وتقييماتهم</h2>
+            
+            <div class="rating-overview">
+                <div class="overall-rating">
+                    <div class="rating-number">4.8</div>
+                    <div class="stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <p style="color: #666; margin: 10px 0;">من 5 نجوم (بناءً على 127+ تقييم)</p>
+                </div>
+                
+                <div class="rating-breakdown">
+                    <div class="rating-item">
+                        <div class="number">98%</div>
+                        <div class="label">رضا العملاء</div>
+                    </div>
+                    <div class="rating-item">
+                        <div class="number">95%</div>
+                        <div class="label">سرعة الخدمة</div>
+                    </div>
+                    <div class="rating-item">
+                        <div class="number">97%</div>
+                        <div class="label">جودة العمل</div>
+                    </div>
+                    <div class="rating-item">
+                        <div class="number">96%</div>
+                        <div class="label">الأسعار العادلة</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">أح</div>
+                        <div class="review-info">
+                            <div class="customer-name">أحمد المحمد - المدينة المنورة</div>
+                            <div class="review-date">منذ أسبوع</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        خدمة ممتازة وسريعة! وصل الفني في نفس اليوم وأصلح المكيف بمهارة عالية. الأسعار معقولة والتعامل راقي. أنصح بهم بشدة لسكان المدينة المنورة.
+                    </div>
+                    <div class="service-type">صيانة مكيف سبليت</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">فا</div>
+                        <div class="review-info">
+                            <div class="customer-name">فاطمة السعود - قباء</div>
+                            <div class="review-date">منذ 3 أيام</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        شركة محترمة جداً، الفني وصل في الوقت المحدد وشرح لي المشكلة بوضوح. المكيف يشتغل الآن بكفاءة عالية. شكراً لكم على الخدمة المميزة.
+                    </div>
+                    <div class="service-type">شحن فريون</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">عب</div>
+                        <div class="review-info">
+                            <div class="customer-name">عبدالله الحربي - العوالي</div>
+                            <div class="review-date">منذ 5 أيام</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        تعاملت معهم في صيانة 3 مكيفات في البيت، كانت الخدمة احترافية من البداية للنهاية. الفنيين مهرة والأسعار مناسبة. بالتأكيد سأتعامل معهم مرة أخرى.
+                    </div>
+                    <div class="service-type">عقد صيانة دورية</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">نو</div>
+                        <div class="review-info">
+                            <div class="customer-name">نورة العتيبي - المنطقة المركزية</div>
+                            <div class="review-date">منذ أسبوعين</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        خدمة عملاء رائعة! اتصلت بهم والفني وصل خلال ساعتين. أصلح المكيف ونظفه بدقة. أسعارهم عادلة وصادقين في التعامل. شكراً جزيلاً.
+                    </div>
+                    <div class="service-type">تنظيف وصيانة</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">خا</div>
+                        <div class="review-info">
+                            <div class="customer-name">خالد الأنصاري - طيبة</div>
+                            <div class="review-date">منذ 10 أيام</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        كان المكيف معطل تماماً، الفني شخص المشكلة بسرعة وأصلحها بمهارة. الآن المكيف يعمل أفضل من الأول. خدمة متميزة وأسعار مقبولة.
+                    </div>
+                    <div class="service-type">إصلاح أعطال</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="customer-avatar">سا</div>
+                        <div class="review-info">
+                            <div class="customer-name">سارة المطيري - الجامعة</div>
+                            <div class="review-date">منذ 4 أيام</div>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                    </div>
+                    <div class="review-text">
+                        شركة موثوقة ومحترمة، التعامل راقي والفنيين أمناء. ركبوا لي مكيف جديد بطريقة احترافية وشرحوا لي كيفية الصيانة. أنصح الجميع بالتعامل معهم.
+                    </div>
+                    <div class="service-type">تركيب مكيف جديد</div>
+                </div>
+            </div>
+
+            <!-- Add Review Form -->
+            <div class="add-review">
+                <h3 style="color: #1e3c72; margin-bottom: 20px; text-align: center;">شاركنا تجربتك وقيم خدماتنا</h3>
+                <div class="rating-input">
+                    <label style="color: #1e3c72; font-weight: bold;">تقييمك للخدمة:</label>
+                    <div class="star-rating" id="userRating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                </div>
+
+                <form class="review-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewName">الاسم</label>
+                            <input type="text" id="reviewName" name="reviewName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewArea">المنطقة</label>
+                            <select id="reviewArea" name="reviewArea" required>
+                                <option value="">اختر منطقتك</option>
+                                <option value="الحرم النبوي الشريف">الحرم النبوي الشريف</option>
+                                <option value="المنطقة المركزية">المنطقة المركزية</option>
+                                <option value="العوالي">العوالي</option>
+                                <option value="قباء">قباء</option>
+                                <option value="الجامعة">الجامعة</option>
+                                <option value="الملك فهد">الملك فهد</option>
+                                <option value="طيبة">طيبة</option>
+                                <option value="العيون">العيون</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewServiceType">نوع الخدمة التي تلقيتها</label>
+                        <select id="reviewServiceType" name="reviewServiceType" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="صيانة مكيف سبليت">صيانة مكيف سبليت</option>
+                            <option value="صيانة مكيف شباك">صيانة مكيف شباك</option>
+                            <option value="صيانة التكييف المركزي">صيانة التكييف المركزي</option>
+                            <option value="شحن فريون">شحن فريون</option>
+                            <option value="فك وتركيب">فك وتركيب</option>
+                            <option value="عقد صيانة">عقد صيانة</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewText">تعليقك وتقييمك للخدمة</label>
+                        <textarea id="reviewText" name="reviewText" rows="4" placeholder="شاركنا تجربتك مع خدماتنا..." required></textarea>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <a href="#" onclick="sendReview(); return false;" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            إرسال التقييم
+                        </a>
+                        <a href="tel:+966564267351" class="btn btn-call">
+                            <i class="fas fa-phone"></i>
+                            اتصال مباشر
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -1113,14 +1353,14 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>هاتف:</strong><br>
-                            +966568554240
+                            +966564267351
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <strong>واتساب:</strong><br>
-                            +966568554240
+                            +966564267351
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1146,11 +1386,11 @@
                     </div>
 
                     <div class="contact-buttons">
-                        <a href="https://wa.me/966568554240?text=مرحباً، أود التواصل مع شركة المصطفى لصيانة المكيفات" class="btn btn-whatsapp" target="_blank">
+                        <a href="https://wa.me/966564267351?text=مرحباً، أود التواصل مع شركة المصطفى لصيانة المكيفات" class="btn btn-whatsapp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                             تواصل واتساب
                         </a>
-                        <a href="tel:+966568554240" class="btn btn-call">
+                        <a href="tel:+966564267351" class="btn btn-call">
                             <i class="fas fa-phone"></i>
                             اتصل الآن
                         </a>
@@ -1189,7 +1429,7 @@
                                 <i class="fab fa-whatsapp"></i>
                                 إرسال للواتساب
                             </a>
-                            <a href="tel:+966568554240" class="btn btn-call">
+                            <a href="tel:+966564267351" class="btn btn-call">
                                 <i class="fas fa-phone"></i>
                                 اتصال مباشر
                             </a>
@@ -1207,7 +1447,7 @@
                     <h3>شركة المصطفى - المدينة المنورة</h3>
                     <p>شريكك الموثوق في صيانة المكيفات</p>
                     <p>نخدم جميع أحياء المدينة المنورة</p>
-                    <p><strong>للتواصل: +966568554240</strong></p>
+                    <p><strong>للتواصل: +966564267351</strong></p>
                     <div style="margin: 15px 0; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
                         <small>
                             <i class="fas fa-clock"></i>
@@ -1215,10 +1455,10 @@
                         </small>
                     </div>
                     <div class="social-links">
-                        <a href="https://wa.me/966568554240" class="social-whatsapp" target="_blank">
+                        <a href="https://wa.me/966564267351" class="social-whatsapp" target="_blank">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="tel:+966568554240" class="social-phone">
+                        <a href="tel:+966564267351" class="social-phone">
                             <i class="fas fa-phone"></i>
                         </a>
                     </div>
@@ -1226,12 +1466,12 @@
                 
                 <div class="footer-section">
                     <h3>خدماتنا</h3>
-                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف سبليت" target="_blank">صيانة مكيفات سبليت</a>
-                    <a href="https://wa.me/966568554240?text=أود صيانة مكيف شباك" target="_blank">صيانة مكيفات شباك</a>
-                    <a href="https://wa.me/966568554240?text=أود صيانة التكييف المركزي" target="_blank">التكييف المركزي</a>
-                    <a href="https://wa.me/966568554240?text=أود شحن غاز الفريون" target="_blank">شحن الفريون</a>
-                    <a href="https://wa.me/966568554240?text=أود فك وتركيب مكيف" target="_blank">فك وتركيب</a>
-                    <a href="https://wa.me/966568554240?text=أود الاستفسار عن عقود الصيانة" target="_blank">عقود الصيانة</a>
+                    <a href="https://wa.me/966564267351?text=أود صيانة مكيف سبليت" target="_blank">صيانة مكيفات سبليت</a>
+                    <a href="https://wa.me/966564267351?text=أود صيانة مكيف شباك" target="_blank">صيانة مكيفات شباك</a>
+                    <a href="https://wa.me/966564267351?text=أود صيانة التكييف المركزي" target="_blank">التكييف المركزي</a>
+                    <a href="https://wa.me/966564267351?text=أود شحن غاز الفريون" target="_blank">شحن الفريون</a>
+                    <a href="https://wa.me/966564267351?text=أود فك وتركيب مكيف" target="_blank">فك وتركيب</a>
+                    <a href="https://wa.me/966564267351?text=أود الاستفسار عن عقود الصيانة" target="_blank">عقود الصيانة</a>
                 </div>
                 
                 <div class="footer-section">
@@ -1245,7 +1485,7 @@
                             نصل إليك في أي مكان بالمدينة المنورة
                         </small>
                     </div>
-                    <a href="https://wa.me/966568554240?text=أود الحصول على عرض سعر في المدينة المنورة" target="_blank" style="color: #25D366; font-weight: bold;">
+                    <a href="https://wa.me/966564267351?text=أود الحصول على عرض سعر في المدينة المنورة" target="_blank" style="color: #25D366; font-weight: bold;">
                         <i class="fab fa-whatsapp"></i>
                         احصل على عرض سعر مجاني
                     </a>
@@ -1255,170 +1495,4 @@
             <div style="text-align: center;">
                 <p>&copy; 2025 شركة المصطفى لصيانة المكيفات - المدينة المنورة. جميع الحقوق محفوظة.</p>
                 <p style="margin-top: 8px;">
-                    للتواصل في المدينة المنورة: 
-                    <a href="tel:+966568554240" style="color: #ffd700; text-decoration: none; margin: 0 5px;">
-                        <i class="fas fa-phone"></i> +966568554240
-                    </a>
-                    |
-                    <a href="https://wa.me/966568554240" style="color: #25D366; text-decoration: none; margin: 0 5px;" target="_blank">
-                        <i class="fab fa-whatsapp"></i> واتساب
-                    </a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/966568554240?text=مرحباً، أود الاستفسار عن خدمات صيانة المكيفات" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        // تحسين التمرير السلس
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // تحسين رسائل الواتساب لتشمل المدينة المنورة
-        function sendWhatsAppMessage() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service');
-            const serviceText = service.options[service.selectedIndex].text;
-            const message = document.getElementById('message').value;
-
-            if (!name || !phone || !service.value || !message) {
-                alert('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-
-            const whatsappMessage = `مرحباً، أود طلب خدمة صيانة مكيفات في المدينة المنورة
-
-📝 البيانات:
-الاسم: ${name}
-رقم الهاتف: ${phone}
-نوع الخدمة: ${serviceText}
-الموقع: المدينة المنورة
-
-📋 تفاصيل الطلب:
-${message}
-
-أرجو التواصل معي وإرسال فني في أقرب وقت ممكن، شكراً لكم.`;
-
-            const whatsappURL = `https://wa.me/966568554240?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, '_blank');
-            
-            // إعادة تعيين النموذج
-            document.querySelector('form').reset();
-            
-            // رسالة تأكيد
-            alert('تم إرسال طلبك بنجاح! سيصلك فني في المدينة المنورة قريباً.');
-        }
-
-        // تأثير الظهور التدريجي للعناصر
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // تطبيق التأثير على العناصر
-        window.addEventListener('load', function() {
-            document.querySelectorAll('.service-card, .stat-item, .contact-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
-
-        // تحسين الأداء للأجهزة المحمولة
-        let ticking = false;
-        function updateHeader() {
-            const header = document.querySelector('.header');
-            const scrolled = window.scrollY;
-            
-            if (scrolled > 50) {
-                header.style.backgroundColor = 'rgba(30, 60, 114, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.backgroundColor = '';
-                header.style.backdropFilter = '';
-            }
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updateHeader);
-                ticking = true;
-            }
-        });
-
-        // تحسين استجابة اللمس
-        document.querySelectorAll('.btn, .service-btn, .header-btn').forEach(btn => {
-            btn.addEventListener('touchstart', function() {
-                this.style.transform = 'scale(0.95)';
-            });
-            
-            btn.addEventListener('touchend', function() {
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 150);
-            });
-        });
-
-        // منع الزوم عند النقر على الإدخالات في iOS
-        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-            document.querySelectorAll('input, select, textarea').forEach(element => {
-                element.addEventListener('focus', function() {
-                    this.style.fontSize = '16px';
-                });
-            });
-        }
-
-        // تحسين تجربة النموذج
-        document.querySelectorAll('input, select, textarea').forEach(element => {
-            element.addEventListener('focus', function() {
-                this.parentElement.style.backgroundColor = '#f0f8ff';
-            });
-            
-            element.addEventListener('blur', function() {
-                this.parentElement.style.backgroundColor = '';
-            });
-        });
-
-        // رسالة ترحيب تلقائية مخصصة للمدينة المنورة
-        setTimeout(function() {
-            if (!sessionStorage.getItem('welcomeShown')) {
-                const welcomeMsg = 'مرحباً بك في شركة المصطفى - المدينة المنورة! 🕌✨\n\n• نخدم جميع أحياء المدينة المنورة\n• فنيون محليون متخصصون\n• خدمة 24 ساعة\n• وصول سريع لموقعك';
-                
-                if (confirm(welcomeMsg + '\n\nهل تريد التواصل معنا الآن؟')) {
-                    window.open('https://wa.me/966568554240?text=السلام عليكم، وصلت لموقعكم وأود الاستفسار عن خدمات صيانة المكيفات في المدينة المنورة', '_blank');
-                }
-                
-                sessionStorage.setItem('welcomeShown', 'true');
-            }
-        }, 3000);
-    </script>
-</body>
-</html>
-
+                    للتواصل في المدينة المن
