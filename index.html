@@ -1706,8 +1706,62 @@ ${message}
         });
     }
 
-    let totalReviews = 127;
-    let totalScore = 4.8 * 127;
+    function loadSavedReviews() {
+        const savedReviews = localStorage.getItem('localReviews');
+        if (savedReviews) {
+            const reviews = JSON.parse(savedReviews);
+            const liveReviewsContainer = document.getElementById('liveReviews');
+            
+            reviews.forEach(review => {
+                const reviewCard = document.createElement('article');
+                reviewCard.className = 'live-review-card';
+                reviewCard.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div class="customer-avatar" aria-hidden="true">${review.name.charAt(0)}</div>
+                        <div>
+                            <strong>${review.name} - ${review.area}</strong>
+                            <div style="font-size: 0.8rem; color: #666;">${review.date}</div>
+                        </div>
+                    </div>
+                    <div class="live-stars" role="img" aria-label="تقييم ${review.rating} من 5 نجوم">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+                    <div style="margin: 10px 0; line-height: 1.6;">${review.text}</div>
+                    <div class="service-type">${review.serviceType}</div>
+                `;
+                liveReviewsContainer.appendChild(reviewCard);
+            });
+
+            const savedReviewsCount = reviews.length;
+            const savedReviewsScore = reviews.reduce((sum, review) => sum + review.rating, 0);
+            
+            totalReviews = 127 + savedReviewsCount;
+            totalScore = (4.8 * 127) + savedReviewsScore;
+            
+            updateOverallRating();
+        }
+    }
+
+    function updateOverallRating() {
+        const averageRating = (totalScore / totalReviews).toFixed(1);
+        
+        document.getElementById('overallScore').textContent = averageRating;
+        document.getElementById('totalCount').textContent = totalReviews;
+        
+        // Update star display
+        const filledStars = Math.round(averageRating);
+        const starsHTML = '★'.repeat(filledStars) + '☆'.repeat(5 - filledStars);
+        document.getElementById('overallStars').innerHTML = starsHTML;
+        
+        // Update percentages with more realistic calculations
+        const satisfaction = Math.min(100, Math.round((averageRating / 5) * 100));
+        const speed = Math.max(90, Math.min(100, satisfaction - 2));
+        const quality = Math.max(92, Math.min(100, satisfaction - 1));
+        const price = Math.max(88, Math.min(100, satisfaction - 4));
+        
+        document.getElementById('satisfaction').textContent = satisfaction + '%';
+        document.getElementById('speed').textContent = speed + '%';
+        document.getElementById('quality').textContent = quality + '%';
+        document.getElementById('price').textContent = price + '%';
+    }
 
     function addLocalReview() {
         const name = document.getElementById('reviewName').value.trim();
@@ -1720,6 +1774,23 @@ ${message}
             return;
         }
 
+        // Create review object
+        const review = {
+            name: name,
+            area: area,
+            serviceType: serviceType,
+            text: reviewText,
+            rating: selectedRating,
+            date: getRelativeTime(new Date()),
+            timestamp: Date.now()
+        };
+
+        // Save to localStorage
+        const savedReviews = JSON.parse(localStorage.getItem('localReviews') || '[]');
+        savedReviews.unshift(review); // Add to beginning
+        localStorage.setItem('localReviews', JSON.stringify(savedReviews));
+
+        // Create and display review card
         const reviewCard = document.createElement('article');
         reviewCard.className = 'live-review-card';
         reviewCard.innerHTML = `
@@ -1737,23 +1808,10 @@ ${message}
         
         document.getElementById('liveReviews').prepend(reviewCard);
 
+        // Update totals
         totalReviews++;
         totalScore += selectedRating;
-        const averageRating = (totalScore / totalReviews).toFixed(1);
-        
-        document.getElementById('overallScore').textContent = averageRating;
-        document.getElementById('totalCount').textContent = totalReviews;
-        
-        // Update star display
-        const filledStars = Math.round(averageRating);
-        const starsHTML = '★'.repeat(filledStars) + '☆'.repeat(5 - filledStars);
-        document.getElementById('overallStars').innerHTML = starsHTML;
-        
-        // Update percentages with more realistic calculations
-        const percentage = Math.min(100, Math.round((averageRating / 5) * 100)) + '%';
-        ['satisfaction', 'speed', 'quality', 'price'].forEach(id => {
-            document.getElementById(id).textContent = percentage;
-        });
+        updateOverallRating();
 
         // Reset form
         document.querySelector('.review-form').reset();
@@ -1761,8 +1819,59 @@ ${message}
         updateStarRating();
         
         // Success message
-        alert('شكراً لك! تم إضافة تقييمك بنجاح.');
+        alert('شكراً لك! تم إضافة تقييمك بنجاح وحفظه بشكل دائم.');
     }
+
+    function getRelativeTime(date) {
+        const now = new Date();
+        const diffInMinutes = Math.floor((now - date) / (1000 * 60));
+        
+        if (diffInMinutes < 1) return 'الآن';
+        if (diffInMinutes < 60) return `منذ ${diffInMinutes} دقيقة`;
+        
+        const diffInHours = Math.floor(diffInMinutes / 60);
+        if (diffInHours < 24) return `منذ ${diffInHours} ساعة`;
+        
+        const diffInDays = Math.floor(diffInHours / 24);
+        if (diffInDays < 7) return `منذ ${diffInDays} يوم`;
+        if (diffInDays < 30) return `منذ ${Math.floor(diffInDays / 7)} أسبوع`;
+        
+        return `منذ ${Math.floor(diffInDays / 30)} شهر`;
+    }
+
+    function updateRelativeTimes() {
+        const savedReviews = JSON.parse(localStorage.getItem('localReviews') || '[]');
+        const reviewCards = document.querySelectorAll('.live-review-card');
+        
+        reviewCards.forEach((card, index) => {
+            if (savedReviews[index]) {
+                const timeElement = card.querySelector('div[style*="font-size: 0.8rem"]');
+                if (timeElement) {
+                    const reviewDate = new Date(savedReviews[index].timestamp);
+                    timeElement.textContent = getRelativeTime(reviewDate);
+                }
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadSavedReviews();
+        
+        // Update relative times every minute
+        setInterval(updateRelativeTimes, 60000);
+        
+        // Announce page load to screen readers
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = 'تم تحميل صفحة فني صيانة وتركيب التكييفات بنجاح';
+        document.body.appendChild(announcement);
+        
+        setTimeout(() => {
+            document.body.removeChild(announcement);
+        }, 1000);
+    });
 
     const observerOptions = {
         threshold: 0.1,
@@ -1873,21 +1982,6 @@ ${message}
         console.error('خطأ في الصفحة:', e.error);
         // Don't show error to user unless it's critical
     });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Announce page load to screen readers
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.textContent = 'تم تحميل صفحة فني صيانة وتركيب التكييفات بنجاح';
-        document.body.appendChild(announcement);
-        
-        setTimeout(() => {
-            document.body.removeChild(announcement);
-        }, 1000);
-    });
 </script>
 </body>
 </html>
-  
